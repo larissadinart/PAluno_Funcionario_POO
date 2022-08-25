@@ -18,7 +18,33 @@ namespace PAluno_Funcionario_POO
 
             Ra = ra;
             Matricula = matricula;
-
         }
+            void setRa()
+            {
+                this.Ra = Console.ReadLine();
+            }
+
+            void setMatricula()
+            {
+                this.Matricula = DateTime.Parse(Console.ReadLine());
+            }
+
+            void getRa()
+            {
+                Console.WriteLine(this.Ra);
+            }
+            void getMatricula()
+            {
+                Console.WriteLine(this.Matricula);
+            }
+
+            public override string ToString()
+        {
+            return "RA: " + Ra + "\n Data de Matrícula: " + Matricula;
+        }
+
     }
 }
+
+
+

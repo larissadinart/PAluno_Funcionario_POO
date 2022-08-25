@@ -20,6 +20,28 @@ namespace PAluno_Funcionario_POO
             Nasc = nasc;
             Cpf = cpf;
         }
+
+        public void getNome()
+        {
+            Console.WriteLine(this.Nome);
+        }
+        public void getNasc()
+        {
+            Console.WriteLine(this.Nasc);
+        }
+        public void getCpf()
+        {
+            Console.WriteLine(this.Cpf);
+        }
+
+        public override string ToString()
+        {
+            return "Nome: " + Nome + "\n Data de nascimento: " + Nasc + "Cpf: " + Cpf;
+        }
+
+
+
+
     }
 }
 
