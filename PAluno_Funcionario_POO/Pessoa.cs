@@ -10,38 +10,70 @@ namespace PAluno_Funcionario_POO
     internal class Pessoa
     {
         String Nome;
-        DateTime Nasc;
+        String Nasc;
         String Cpf;
         //método construtor
 
-        public Pessoa(string nome, DateTime nasc, string cpf)
+        public Pessoa(string nome, String nasc, string cpf)
         {
             Nome = nome;
             Nasc = nasc;
             Cpf = cpf;
         }
+        public Pessoa()
+        {
+        }
+
+        public Pessoa(string v1, int v2, string v3)
+        {
+        }
+
+        public void setNome()
+        {
+            Console.WriteLine("Digite o nome da pessoa: ");
+            this.Nome = Console.ReadLine();
+        }
+        public void setNasc()
+        {
+            Console.WriteLine("Digite a data de nascimento da pessoa: ");
+            this.Nasc = Console.ReadLine();
+        }
+        public void setCpf()
+        {
+            Console.WriteLine("Digite o cpf da pessoa: ");
+            this.Cpf = Console.ReadLine();
+        }
 
         public void getNome()
         {
-            Console.WriteLine(this.Nome);
+            Console.WriteLine("Nome: "+this.Nome);
         }
         public void getNasc()
         {
-            Console.WriteLine(this.Nasc);
+            Console.WriteLine("Data de nascimento: "+this.Nasc);
         }
         public void getCpf()
         {
-            Console.WriteLine(this.Cpf);
+            Console.WriteLine("CPF: "+ this.Cpf);
         }
 
         public override string ToString()
         {
-            return "Nome: " + Nome + "\n Data de nascimento: " + Nasc + "Cpf: " + Cpf;
+            return "Nome: " + Nome + "\n Data de nascimento: " + Nasc + "Cpf: " + Cpf; 
         }
 
-
-
-
+        public void cadastraPessoa()
+        {
+            setNome();
+            setNasc();
+            setCpf();
+        }
+        public void imprimePessoa()
+        {
+            getNome();
+            getCpf();
+            getNasc();
+        }
     }
 }
 

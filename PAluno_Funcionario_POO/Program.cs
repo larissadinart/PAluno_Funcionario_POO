@@ -6,12 +6,19 @@ namespace PAluno_Funcionario_POO
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Pessoa p1 = new Pessoa();
+            Aluno a1 = new Aluno();
+            Funcionario f1 = new Funcionario();
+
+            p1.cadastraPessoa();
+            p1.imprimePessoa();
+
+            a1.cadastraAluno();
+            a1.imprimeAluno();
+
+            f1.cadastraFuncionario();
+            f1.imprimeFuncionario();
+
         }
     }
 }
-/*3 - Faça um programa que crie objetos filhos de uma classe pai "Pessoa", essas classes filhas terão nome de "Alunos" e " Funcionários".
-A classe pai tem os seguintes atributos: nome, data de nascimento, cpf. A classe Aluno tem os seguintes atributos: RA e data de matricula.
-A classe Funcionários tem os seguintes atributos: n do Pis, salário e setor. 
-(criar metodos get, set e tostring). Informar numero de alunos
-e funcionarios.*/

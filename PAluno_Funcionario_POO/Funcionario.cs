@@ -12,37 +12,65 @@ namespace PAluno_Funcionario_POO
         float Salario;
         String Setor;
 
-        public Funcionario(string pis, float salario, string setor)
+        public Funcionario(string nome, String nasc, string cpf,string pis, float salario, string setor)
             : base(nome, nasc, cpf)
         {
             Pis = pis;
             Salario = salario;
             Setor = setor;
         }
+        public Funcionario()
+        {
+
+        }
         void setPis()
         {
+            Console.WriteLine("Digite o numero do Pis: ");
             this.Pis = Console.ReadLine();
         }
         void setSalario()
         {
+            Console.WriteLine("Digite o valor do Salário: ");
             this.Salario = float.Parse(Console.ReadLine());
         }
         void setSetor()
         {
+            Console.WriteLine("Digite o Setor: ");
             this.Setor = Console.ReadLine();
         }
         void getPis()
         {
-            Console.WriteLine(this.Pis);
+            Console.WriteLine("PIS: "+ this.Pis);
         }
         void getSalario()
         {
-            Console.WriteLine(this.Salario);
+            Console.WriteLine("Salário" + this.Salario);
         }
+
         void getSetor()
         {
-            Console.WriteLine(this.Setor);
+            Console.WriteLine("Digite o setor: ");
+            Console.WriteLine("Setor" + this.Setor);
         }
+        public void cadastraFuncionario()
+        {
+            setNome();
+            setNasc();
+            setCpf();
+            setPis();
+            setSalario();
+            setSetor();
+        }
+        public void imprimeFuncionario()
+        {
+            getNome();
+            getCpf();
+            getNasc();
+            getPis();
+            getSalario();
+            getSetor();
+        }
+ 
         public override string ToString()
         {
             return "PIS: " + Pis + "\n Salário: " + Salario + "Setor: " + Setor;

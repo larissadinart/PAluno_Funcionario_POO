@@ -9,38 +9,61 @@ namespace PAluno_Funcionario_POO
     internal class Aluno : Pessoa
     {
         String Ra;
-        DateTime Matricula;
+        String Matricula;
 
 
-        public Aluno(string ra, DateTime matricula)
+        public Aluno(string nome, String nasc, string cpf, string ra, String matricula)
             : base(nome, nasc, cpf)
         {
 
             Ra = ra;
             Matricula = matricula;
         }
-            void setRa()
-            {
-                this.Ra = Console.ReadLine();
-            }
+        public Aluno()
+        {
 
-            void setMatricula()
-            {
-                this.Matricula = DateTime.Parse(Console.ReadLine());
-            }
+        }
+        public void setRa()
+        {
+            Console.WriteLine("Digite o número do Ra: ");
+            this.Ra = Console.ReadLine();
+        }
 
-            void getRa()
-            {
-                Console.WriteLine(this.Ra);
-            }
-            void getMatricula()
-            {
-                Console.WriteLine(this.Matricula);
-            }
+        public void setMatricula()
+        {
+            Console.WriteLine("Digite o número da Matricula: ");
+            this.Matricula = Console.ReadLine();
+        }
 
-            public override string ToString()
+        public void getRa()
+        {
+            Console.WriteLine("Ra: " + this.Ra);
+        }
+        public void getMatricula()
+        {
+            Console.WriteLine("Matrícula: "+ this.Matricula);
+        }
+
+        public override string ToString()
         {
             return "RA: " + Ra + "\n Data de Matrícula: " + Matricula;
+        }
+
+        public void cadastraAluno()
+        {
+            setNome();
+            setNasc();
+            setCpf();
+            setRa();
+            setMatricula();
+        }
+        public void imprimeAluno()
+        {
+            getNome();
+            getCpf();
+            getNasc();
+            getRa();
+            getMatricula();
         }
 
     }
